@@ -6,6 +6,9 @@
 //  Copyright (c) 2014년 YK. All rights reserved.
 //
 
+// http://nshipster.com/method-swizzling/
+
+
 #import "ViewController.h"
 #import "objc/runtime.h"
 
@@ -13,36 +16,12 @@
 
 @end
 
-//@interface NSMutableArray (LoggingAddObject)
-//- (void)logAddObject:(id)aObject;
-//@end
-//
-//
-//@implementation NSMutableArray (LoggingAddObject)
-//
-//
-//+ (void)load {
-//	Method addObject = class_getInstanceMethod(self, @selector(addObject:));
-//	Method logAddObject = class_getInstanceMethod(self, @selector(logAddObject:));
-//	method_exchangeImplementations(addObject, logAddObject);
-//}
-//
-//
-//- (void)logAddObject:(id)aObject {
-//	[self logAddObject:aObject];
-//	NSLog(@"Added object %@ to array %@", aObject, self);
-//}
-//@end
-//
-//
+
 @implementation ViewController
             
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-//	NSMutableArray *ma=[@[@1,@2]mutableCopy];
-//	[NSMutableArray load];
-//	[ma addObject:@3];
 }
 
 - (void)didReceiveMemoryWarning {
